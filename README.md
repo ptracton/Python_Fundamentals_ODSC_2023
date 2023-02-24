@@ -11,6 +11,7 @@ This is a 2 hour 45 minute class.  It is broken up into 3 parts.  Each part will
 1. **Installation and Basics**
 
 We will start with installation if this was not done before the class started.  Students need both anaconda python and jupyter labs.  Once installed, this part of the lecture will cover:
+
     1. Numeric types
     
     2. Strings
@@ -23,6 +24,7 @@ We will start with installation if this was not done before the class started.  
 2. **Program Flow**
 
 This part of the course will cover programming syntax.  The topics will include
+
     1. If/else
     
     2. For loops
@@ -33,6 +35,7 @@ This part of the course will cover programming syntax.  The topics will include
 3. **Additional Code**
 
 This part of the course will introduce students to using both built in and external 3rd party code.
+
     1. import
     
     2. details of the specific library
