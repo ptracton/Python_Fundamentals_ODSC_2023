@@ -1,0 +1,371 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{White Space}
+
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      
+      \begin{itemize}
+      \item PEP 8 rules on \underline{\href{https://www.python.org/dev/peps/pep-0008/\#whitespace-in-expressions-and-statements}{White Space}}
+      \item Most controversial aspect of Python.
+      \item White space used to distinguish blocks
+      \item Tab == Space!
+      \item Comments and empty lines are ignored
+      \item Avoid using Tab
+      \item Use and editor/IDE that is Python aware
+      \end{itemize}
+      
+      
+    \end{column}
+
+    \hfill
+
+    \begin{column}{.48\textwidth}
+      Code Example:
+      
+
+      \inputminted[firstline=3,
+      lastline=18,
+      breaklines,
+      fontsize=\tiny,
+      bgcolor=Background,
+      linenos]{python}{../src/whitespace.py}
+      
+      
+    \end{column}
+  \end{columns}
+
+
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Coding Standards}
+  \begin{itemize}
+  \item Python has specified the coding standards for code written in this language
+  \item This is \underline{\href{https://www.python.org/dev/peps/pep-0008/}{PEP 8}}
+  \item If you are in doubt about a style issue with the way you write Python, refer to PEP 8 and follow it
+  \end{itemize}
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Comments}
+  \begin{itemize}
+  \item Python comments start with '\#'
+  \item Multi-line comments can be put in triple quotes  """ THIS IS A COMMENT """ 
+  \end{itemize}
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Duck Typing}
+  \begin{itemize}
+  \item “If it walks like a duck and quacks like a duck...”
+  \item No type checking unless absolutely necessary
+  \item Python will let you change the data type of a variable at any time!
+    \pause
+    \begin{tcolorbox}[colback=red!5!white,colframe=red!75!black,title=WARNING]
+      BE CAREFUL! \\
+      Variables can change type if you are not careful
+    \end{tcolorbox}
+    
+  \end{itemize}
+\end{Slide}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Variables}
+  \begin{itemize}
+  \item PEP 8 Rules on \underline{\href{https://www.python.org/dev/peps/pep-0008/\#global-variable-names}{variable names}}
+  \item Create variable with assignment:
+    \begin{itemize}
+    \item  a = 5
+    \end{itemize}
+    
+  \item Variables are references!
+  \item Variables are memory managed
+  \item Data pointed to by variable is destroyed when variable goes out of scope
+  \item Assigning a variable to another creates new reference
+    \begin{itemize}
+    \item b = a
+    \end{itemize}
+  \end{itemize}
+
+\end{Slide}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Integer Data Types}
+  \underline{\href{https://docs.python.org/3/library/stdtypes.html\#numeric-types-int-float-complex}{Official documentation}}\\
+  \begin{itemize}
+    \item Integers have unlimited precision.
+    \item Many built in functions
+    \item Tools to convert formats
+    \end{itemize}
+\end{Slide}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Integer Operations}
+
+  \begin{table}[h]
+    \begin{tabular}{|l|p{8cm}|} \hline
+      x+y    & Addition of x and y \\ \hline
+      x-y    & Subtraction of y from x \\ \hline
+      x * y  & Multiplication of x and y \\ \hline 
+      x/y    & Divides x by y and returns a float \\ \hline
+      x//y   & Divides x by y and truncates fractional part to return an integer  \\ \hline
+      x\%y   & Returns the modulus (remainder) of x divided by y \\ \hline
+      x**y   & Raises x to the power of y \\ \hline
+      -x     & negates x  \\ \hline
+    \end{tabular}
+  \end{table}
+
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Integer Functions}
+
+  \begin{table}[h]
+    \begin{tabular}{|l|p{8cm}|} \hline
+      abs(x)    & Returns the absolute value of x \\ \hline
+      divmod(x,y)    & Returns the quotient and remainder of x divided by y as a tuple \\ \hline
+      pow(x, y)  & Raises x to the power of y, same as x ** y\\ \hline 
+      pow(x,y,z)    & Faster alternative to (x ** y)\%z \\ \hline
+      round(x, n)   & Returns x rounded to n integeral digits  \\ \hline
+      bin(x)  & Returns a string that is a binary representation of x, bin(5) ="0b101" \\ \hline
+      hex(x)   &Returns a string that is a hexadecimal representation of x, hex(30) ="0x1e" \\ \hline
+      int(x)     & Converts object x to an integer or raises an error\\ \hline
+      int(s, base)     & converts string s to an integer  \\ \hline
+      oct(x)     & Returns a string that is a octal representation of x, oct(30) =''036" \\ \hline
+    \end{tabular}
+  \end{table}
+
+\end{Slide}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Floating Point}
+  \begin{itemize}
+  \item Holds double precision values
+  \item Range depends on compiler and platform that we are running
+  \item Float performs all the same operations as the integer type
+  \item float\_var = 1.0
+  \end{itemize}
+\end{Slide}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Strings}
+  This is \underline{\href{https://docs.python.org/3/library/stdtypes.html\#text-sequence-type-str}{Python 3 Strings Documentation}}\\
+  \begin{itemize}
+  \item immutable sequence of Unicode characters
+  \item Arbitrary length
+  \item Support usual comparison operations 
+  \item Can use single, double or tripple quotation marks to create a string
+  \item string\_var = 'This is a string'
+  \item string\_var = ``This is a string''
+  \item string\_var = '''This is a string'''
+
+  \end{itemize}
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{String Operations}
+
+
+  \begin{table}[h]
+    \begin{tabular}{|l|p{8cm}|} \hline
+      s[x]    & Access index x in the string \\ \hline
+      s[:x]    & Access from the start of the string to index x \\ \hline
+      s[x:]  & Access from index x to the end of the string \\ \hline 
+      s[x:y]    & Access from index x to index y \\ \hline
+      s[x:y:z]   & Access from index x to index y byte steps of z\\ \hline
+      s1+s2   & Concatenation of 2 strings \\ \hline
+      s *n  & Multiply the string n times, creates a new string with n copies of the old string \\ \hline
+      len(s) & Length of string s \\ \hline
+      c in s & Returns a Boolean True if c is in s \\ \hline
+      c not in s & Returns a Boolean True if c is not in s \\ \hline
+    \end{tabular}
+  \end{table}
+
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{String Methods}
+
+  This is a list of the commonly used methods.\\
+  The full list \underline{\href{https://docs.python.org/3/library/stdtypes.html\#str.capitalize}{starts here.}}
+
+  \begin{table}[h]
+    \begin{tabular}{|l|p{5cm}|} \hline
+      str.capitalize()    & Capitalize the first character \\ \hline
+      str.format(*args, **kwargs)    & Reformat the string with the specified parameters \\ \hline
+      str.join(iterable)  & Concatenate a list of strings \\ \hline 
+      str.lower()    & Returns strings as alll lowercase characters \\ \hline
+      str.split(sep=None, maxsplit=-1)   & split the string into a list of strings based on sep delimiter  \\ \hline
+      str.strip([chars])   & Return the string with those characters removed. \\ \hline
+    \end{tabular}
+  \end{table}
+
+\end{Slide}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Lists}
+  \begin{itemize}
+  \item \underline{\href{https://docs.python.org/3/library/stdtypes.html\#lists}{Official Documentation}}
+  \item List contains arbitrary objects
+  \item Mutable 
+  \item Can be sorted
+  \item list\_var = []  \# Creates an empty list
+  \item list\_var = [1,2,''String'']  \# Creates an list with data
+  \end{itemize}
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{List Operations}
+
+
+  \begin{table}[h]
+    \begin{tabular}{|l|p{8cm}|} \hline
+      s[x]    & Access index x in the list \\ \hline
+      s[:x]    & Access from the start of the list to index x \\ \hline
+      s[x:]  & Access from index x to the end of the list \\ \hline 
+      s[x:y]    & Access from index x to index y \\ \hline
+      s[x:y:z]   & Access from index x to index y byte steps of z\\ \hline
+      s1+s2   & Concatenation of 2 lists \\ \hline
+      s *n  & Multiply the list n times, creates a new list with n copies of the old list \\ \hline
+      len(s) & Length of list s \\ \hline
+      c in s & Returns a Boolean True if c is in s \\ \hline
+      c not in s & Returns a Boolean True if c is not in s \\ \hline
+    \end{tabular}
+  \end{table}
+
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{List Methods}
+
+  This is a list of the commonly used methods.\\
+  The full list \underline{\href{https://docs.python.org/3/tutorial/datastructures.html\#data-structures}{starts here.}}
+
+  \begin{table}[h]
+    \begin{tabular}{|l|p{8cm}|} \hline
+      list.append(x)    & add x onto the end of the list \\ \hline
+      list.extend(L)    & extend the list with a new list L \\ \hline
+      list.insert(i,x)    & insert x at position i in the list \\ \hline
+      list.pop(i)    & remove the item from position i, if i is not specified, remove the last item \\ \hline
+      list.sort()    & sort items in place \\ \hline
+    \end{tabular}
+  \end{table}
+
+\end{Slide}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Dictionaries}
+  \begin{itemize}
+  \item \underline{\href{https://docs.python.org/3/library/stdtypes.html\#mapping-types-dict}{Official Documentation}}
+  \item Dictionaries contain arbitrary key/value pairs
+  \item Like an associative array
+  \item Keys must be unique and \underline{\href{https://docs.python.org/3/glossary.html\#term-hashable}{hashable}}
+  \item Lookup is O(1)
+  \item No sorting order
+  \item Dictionary is mutable!
+  \item Literals:
+    \begin{itemize}
+    \item dict\_var = \{key1:value1, key2:value2...\}
+    \item empty\_dict = \{ \}
+    \end{itemize}
+
+  \end{itemize}
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Dictionary Operations and Methods}
+
+
+  \begin{table}[h]
+    \begin{tabular}{|l|p{8cm}|} \hline
+      len(d)    & Returns the number of key/value pairs \\ \hline
+      value = d[key]    & Returns the value for this key, an error if key does not exist \\ \hline
+      d[key] = value & Creates or replaces this key and associates this data with it\\ \hline
+      del d[key] & Deletes this key/value \\ \hline
+      key in d & Returns True if it is, False if it is not \\ \hline
+      d.keys() & Returns a list of keys \\ \hline
+      d.values & Returns a list of values \\ \hline
+      d.update(dict) & Adds the passed in dictionary to d \\ \hline
+      d.items() & Returns a list of key/value tuples \\ \hline
+    \end{tabular}
+  \end{table}
+
+\end{Slide}
+
+

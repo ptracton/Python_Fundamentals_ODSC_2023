@@ -1,0 +1,35 @@
+\documentclass[xcolor=dvipsnames, 12pt]{beamer}
+\usetheme{Madrid}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage{tikz} 
+\usepackage{tikz-timing}[2009/05/15]
+\usetikzlibrary{snakes, shapes, arrows}
+\usetikzlibrary{trees}
+\usetikzlibrary{fit,arrows,calc,positioning}
+\usetikzlibrary{decorations.markings}
+\usepackage{dirtree}
+\usepackage{amsmath}
+\usepackage{minted}
+%\usepackage{enumitem}
+%\usepackage{xwatermark}
+\definecolor{UCLABlue}{RGB}{83, 104, 149}
+\definecolor{UCLAGold}{RGB}{254, 187, 54}
+\definecolor{Background}{RGB}{240, 240, 240}
+%\setbeamertemplate{background canvas}[vertical shading][bottom=UCLABlue,top=UCLAGold]
+%\setbeamercolor{background canvas}{bg=UCLAGold}
+\usecolortheme[named=UCLABlue]{structure} 
+\setbeamertemplate{navigation symbols}{}
+\author[P. Tracton]{Philip Tracton} 
+%\title[Y3199 Python Programming 1 Summer 2013]{Python Programming 1} 
+%\institute[ODSC Europe 2023]{Online}
+%\date{\today}
+\date{}
+
+\newenvironment{Slide}[1]{
+ 	\subsection{#1} 
+  	\begin{frame}[fragile, environment=Slide, label=#1]{#1}
+}{ 
+	\end{frame} 
+} 

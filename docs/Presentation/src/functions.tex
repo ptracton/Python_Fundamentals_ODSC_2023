@@ -1,0 +1,167 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Functions}
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      \tiny
+      \begin{itemize}
+      \item Functions are a way of breaking up the code into more manageable pieces.
+      \item There are 4 types of Functions
+        \begin{enumerate}
+          \tiny
+          \pause
+        \item Global are available to everyone in the module
+          \pause
+        \item Local are functions inside of functions
+          \pause
+        \item Lambda are limited functions that are created just in time to use them
+          \pause
+        \item Methods are associated with a specific data type and part of Object Oriented Programming
+        \end{enumerate}
+      \end{itemize}
+      
+      
+    \end{column}
+
+    \hfill
+
+    \begin{column}{.48\textwidth}
+      \pause 
+      Psuedo Code Example:
+            
+      \inputminted[firstline=3,
+      lastline=10,
+      breaklines,
+      fontsize=\tiny,
+      bgcolor=Background,
+      linenos]{python}{../src/psuedo.py}
+      
+      
+    \end{column}
+  \end{columns}
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Names and DocStrings}
+
+  \begin{itemize}
+  \item PEP 8 rules on \underline{\href{https://www.python.org/dev/peps/pep-0008/\#function-names}{Function Names}}
+  \item Use good clear names for the functions, should indicate what the function does
+  \item Avoid abbreviations
+  \item Docstrings are comments that come right after the def line of the function.  It should indicate what the function does and how to use it.  
+\item Docstrings have their own PEP, \underline{\href{https://www.python.org/dev/peps/pep-0257/}{PEP 257}}
+\item Although \underline{\href{https://www.python.org/dev/peps/pep-0008/\#documentation-strings}{PEP 8}} also has some thoughts
+  \end{itemize}
+\pause
+\begin{alertblock}
+{All functions in your labs must have doc strings!}
+\end{alertblock}
+
+
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Function Arguments}
+  \begin{itemize}
+  \item Does not type check
+  \begin{itemize}
+  \item you can manually check if you wish
+  \end{itemize}
+\item All values are passed by reference
+ \begin{itemize}
+  \item immutable types can't be modified by a function
+  \end{itemize}
+\item Arguments are local variables 
+\item Arguments go out of scope when functions return
+\item Without a return statement, the function returrns \textbf{None}
+  \end{itemize}
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Default Arguments}
+ \begin{columns}
+    \begin{column}{.48\textwidth}
+      
+      \begin{itemize}
+      \item Specify a default value for a function argument 
+\item If no value is given for this parameter when the function is called, the default value is used
+\item This is very handy!
+     
+      \end{itemize}
+      
+      
+    \end{column}
+
+    \hfill
+
+    \begin{column}{.48\textwidth}
+\pause
+      Code Example:
+      
+      \inputminted[firstline=3,
+      lastline=23,
+      breaklines,
+      fontsize=\tiny,
+      bgcolor=Background,
+      linenos]{python}{../src/functions.py}
+
+      
+      
+    \end{column}
+  \end{columns}
+
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Named Arguments}
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      
+      \begin{itemize}
+      \item Use name arguments to comment the code (use good names!)
+      \item Can be used to skip arguments
+      \end{itemize}
+      
+      
+    \end{column}
+
+    \hfill
+
+    \begin{column}{.48\textwidth}
+\pause
+      Code Example:
+            
+   \inputminted[firstline=3,
+      lastline=27,
+      breaklines,
+      fontsize=\tiny,
+      bgcolor=Background,
+      linenos]{python}{../src/functions.py}
+      
+      
+    \end{column}
+  \end{columns}
+
+
+\end{Slide}
+

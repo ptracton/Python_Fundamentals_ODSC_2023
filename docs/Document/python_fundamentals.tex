@@ -1,0 +1,122 @@
+\documentclass{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% Allows for links external to document
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,  % internal links
+  urlcolor=blue,    % external links
+  pdftitle={Decision Tree Manual},  % document internal title
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% Source Code 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Pygment to syntax highlight code
+\usepackage{pygmentex}
+% https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
+\usepackage{minted}
+% To list styles pygmentize -L styles
+\usemintedstyle{emacs}
+\renewcommand\listoflistingscaption{List of source codes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% Fancy headers and footers
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% \usepackage{fancyhdr}
+% \usepackage{lastpage} % lets you know the total number of pages
+% \pagestyle{fancy}  % turns on fancy header
+% % headers and footers have left center and right positions
+% \lhead{Experimental Works}
+% \cfoot{Page \thepage\  of  \pageref{LastPage}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% Glossary and Acronyms
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage[acronym, automake, toc]{glossaries-extra}
+\setabbreviationstyle[acronym]{long-short} % first use is long and spelled out, rest just use acronym
+% 1st is the internal name
+% 2nd is reader displayed
+% 3rd is the full thing
+\newacronym{pt}{Phil Tracton}{Phil Tracton}
+\makeglossaries
+
+\title {Python Fundamentals} 
+\author{Phil Tracton}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\frontmatter
+
+\chapter{Dedication}
+\chapter{Copyright}
+\chapter{Acknowledgements}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\listoflistings % Now typeset the list
+
+\part{Introduction and Python Data Types}
+
+\chapter{Introduction to Python}
+
+\chapter{Tools}
+
+\section{Anaconda Python}
+\subsection{Command Line}
+\section{Jupyter Labs}
+
+\chapter{Data Types}
+
+\section{Variables}
+\section{Numeric Types}
+\subsection{Integers}
+\subsection{Floating Point}
+\subsection{Complex}
+
+\section{Strings}
+\section{Lists}
+\section{Dictionaries}
+
+
+
+\part{Python Program Flow}
+
+\chapter{Program Flow}
+\section{If-Else}
+\section{For Loops}
+\section{While Loops}
+\section{Functions}
+\section{Exceptions}
+
+\part{Third Party Code and Starting Data Science}
+\section{import}
+\section{Numpy}
+\section{Pandas}
+\section{Matplotlib}
+
+
+
+\appendix
+\printglossary[type=\acronymtype]
+
+
+
+\end{document}
+
