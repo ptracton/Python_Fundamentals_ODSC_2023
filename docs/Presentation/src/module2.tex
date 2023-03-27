@@ -121,6 +121,47 @@
   \end{columns}
 \end{Slide}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Basic Exceptions}
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      
+      \begin{itemize}
+      \item Exceptions are pythons way of handling errors
+      \item \underline{\href{https://docs.python.org/3/library/exceptions.html}{Exception Documentation}}
+      \item \underline{\href{https://docs.python.org/3/tutorial/errors.html}{Exception Tutorial}}
+      \item You must have try and except, all other elements are optional
+      \item Each exception block is tried in order
+      \item Use liberally and do not let errors go silently
+      \item A blank except: will catch any exception.
+      \end{itemize}
+      
+      
+    \end{column}
+
+    \hfill
+
+    \begin{column}{.48\textwidth}
+      \pause
+
+      \inputminted[firstline=3,
+      lastline=27,
+      breaklines,
+      fontsize=\tiny,
+      bgcolor=Background,
+      linenos]{python}{../src/exceptions.py}
+            
+      
+    \end{column}
+  \end{columns}
+\end{Slide}
+
+
 \input{src/functions.tex}
 
 

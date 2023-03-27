@@ -44,9 +44,11 @@ This part of the course will cover programming syntax.  The topics will include
     
     2. For loops
     
-    3. Functions
+    3. Try/Except
     
-    4. File Handling
+    4. Functions
+    
+    5. File Handling
     
 
 3. **Additional Code**
