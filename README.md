@@ -8,6 +8,11 @@ This is the git repository for a half day class that will get students up and ru
 
 Download the [latest distribution](https://www.anaconda.com/products/distribution) for your OS.  It currently supports Windows, Mac OS and Linux.  The key difference between Anaconda and [default python](https://www.python.org/downloads/) is the packages that come with it.  Anaconda will automatically install more libraries that can be of use to you.  Anaconda is known for being data science focused.
 
+
+WARNING!! 
+
+I recently had trouble installing the latest version of Anaconda on a Windows 10 laptop.  The last few versions failed to install correctly for me.  
+
 2. **Install Jupyter Lab**
 
 Once Anaconda Python is installed and running, you will also need to install [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html).  There are 2 main methods of installation.  The first is with conda, which is a package management tool for Anaconda Python.  The second is with pip, which is the generic python package manager.  
