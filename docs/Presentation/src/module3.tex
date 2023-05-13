@@ -5,8 +5,8 @@
   \begin{itemize}
   \item import
   \item numpy
-  \item pandas
   \item Matplotlib
+  \item pandas
   \end{itemize}
 \end{Slide}
 
@@ -25,8 +25,308 @@
   \end{itemize}
 \end{Slide}
 
+\subsection{Numpy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Numpy}
+  \begin{itemize}
+  \item  Numerical Processing library for python
+  \item Lots of tools are built on top of this
+  \item It is a large library with lots of \underline{\href{ttps://numpy.org/learn/}{guides}} and features
+  \item ndarrays can be multi-dimensional
+  \end{itemize}
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{ndarray}
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      
+      \begin{itemize}
+
+      \item This is the \underline{\href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html}{key datatype}} of numpy.
+      \item Similar to a list but expects all data to be numeric and the same type.
+      \item You can create an ndarray from lists 
+      \item Lots of features to \underline{\href{https://numpy.org/devdocs/user/basics.creation.html}{ndarray}}
+        
+      \end{itemize}
+      
+      
+    \end{column}
+
+    \hfill
+
+    \begin{column}{.48\textwidth}
+      Code Example:
+      
+    \inputminted[firstline=3,
+      lastline=19,
+      breaklines,
+      fontsize=\tiny,
+      bgcolor=Background,
+      linenos]{python}{../src/ndexample.py}
+      
+      
+    \end{column}
+  \end{columns}
+
+\end{Slide}
+
+
+\subsection{Matplotlib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Matplotlib}
+  \begin{itemize}
+
+  \item One of many plotting libraries for Python
+      \begin{itemize}        
+      \item \underline{\href{https://matplotlib.org/}{Matplotlib}}
+      \item \underline{\href{https://bokeh.org/}{Bokeh}} 
+      \item \underline{\href{https://seaborn.pydata.org/}{Seaborn}}
+      \item \underline{\href{https://plotly.com/}{Plotly}} 
+  \end{itemize}
+  
+\item Comes with a lot of documentation
+  \begin{itemize}
+  \item \underline{\href{https://matplotlib.org/stable/plot_types/index.html}{Examples}} 
+  \item \underline{\href{https://matplotlib.org/cheatsheets/}{Cheat Sheet}} 
+  \item \underline{\href{https://matplotlib.org/stable/users/getting_started/}{Getting Started}} 
+  \end{itemize}
+
+    
+  \end{itemize}
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Basic Plotting}
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      
+      \begin{itemize}
+
+      \item  \underline{\href{https://matplotlib.org/stable/api/\_as\_gen/matplotlib.pyplot.plot.html}{Plotting}}
+      \item plot and pair of x and y values.
+      \item add to the \underline{\href{https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html}{legend}} in the order added to the plot
+      \item Can set \underline{\href{https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlabel.html}{x}} and \underline{\href{https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylabel.html}{y}} axis labels
+      \item Can set a \underline{\href{https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html}{title}}
+      \item \underline{\href{https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.grid.html}{Grid}} can be enabled or disabled
+      \item Need to show the plot to get it to display
+
+      \end{itemize}
+      
+      
+    \end{column}
+
+    \hfill
+
+    \begin{column}{.48\textwidth}
+      Code Example:
+      
+    \inputminted[firstline=3,
+      lastline=23,
+      breaklines,
+      fontsize=\tiny,
+      bgcolor=Background,
+      linenos]{python}{../src/plot1.py}
+      
+      
+    \end{column}
+  \end{columns}
+
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{SubPlots}
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      
+      \begin{itemize}
+
+      \item You can also visualize \underline{\href{https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html}{multiple plots}} in the same image.
+      \end{itemize}
+      
+      
+    \end{column}
+
+    \hfill
+
+    \begin{column}{.48\textwidth}
+      Code Example:
+      
+    \inputminted[firstline=3,
+      lastline=23,
+      breaklines,
+      fontsize=\tiny,
+      bgcolor=Background,
+      linenos]{python}{../src/plot2.py}
+      
+      
+    \end{column}
+  \end{columns}
+
+\end{Slide}
+
+\subsection{Pandas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Pandas}
+  \begin{itemize}
+    \item \underline{\href{https://pandas.pydata.org/}{Pandas Library}}
+    \item Goal of being the high-level building block for doing practical, real world data analysis in Python
+    \item It's like having a spreadsheet tool built into python
+    \item Comes with extensive \underline{\href{https://pandas.pydata.org/docs/}{documentation}}
+    \item Has a quick \underline{\href{https://pandas.pydata.org/docs/user_guide/10min.html\#min}{10 minute guide}}
+  \end{itemize}
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Data Series}
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      
+      \begin{itemize}
+      \item \underline{\href{https://pandas.pydata.org/docs/reference/series.html}{Documentation}}
+      \item \underline{\href{https://pandas.pydata.org/docs/user_guide/dsintro.html\#series}{Start Up}}
+      \item  a one-dimensional labeled array capable of holding any data type
+      \item It's like numpy's ndarray structure
+      \end{itemize}
+      
+      
+    \end{column}
+
+    \hfill
+
+    \begin{column}{.48\textwidth}
+      Code Example:
+      
+    \inputminted[firstline=3,
+      lastline=23,
+      breaklines,
+      fontsize=\tiny,
+      bgcolor=Background,
+      linenos]{python}{../src/data_series.py}
+      
+      
+    \end{column}
+  \end{columns}
+
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{DataFrame}
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      \tiny
+      \begin{itemize}
+      \item \underline{\href{https://pandas.pydata.org/docs/reference/frame.html}{Documentation}} 
+      \item \underline{\href{https://pandas.pydata.org/docs/user_guide/dsintro.html\#dataframe}{Start Up}} 
+      \item This is the key data structure of pandas
+      \item a 2-dimensional labeled data structure with columns of potentially different types. 
+      \item You can think of it like a spreadsheet or SQL table.
+      \item Can quickly load a csv file, \underline{\href{https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html}{read\_csv}}  
+      \item The \underline{\href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.info.html\#pandas.DataFrame.info}{info}}  method prints information about a DataFrame including the index dtype and columns, non-null values and memory usage.
+      \item The \underline{\href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.columns.html}{columns}} field holds a list of the labels for the columns
+      \item The \underline{\href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.head.html}{head}} method This function returns the first n rows for the object based on position. It is useful for quickly testing if your object has the right type of data in it.
+      \item The \underline{\href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.query.html}{query}} method returns the specified columns
+      \end{itemize}
+      
+      
+    \end{column}
+
+    \hfill
+
+    \begin{column}{.48\textwidth}
+      Code Example:
+      
+    \inputminted[firstline=3,
+      lastline=23,
+      breaklines,
+      fontsize=\tiny,
+      bgcolor=Background,
+      linenos]{python}{../src/data_frame.py}
+      
+      
+    \end{column}
+  \end{columns}
+
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Plotting Pandas}
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      
+      \begin{itemize}
+      \item Matplotlib has special \underline{\href{https://matplotlib.org/stable/api/dates_api.html}{date}} formatting handlers
+      \item There are tools for formatting the date with \underline{\href{https://matplotlib.org/stable/api/figure_api.html\#matplotlib.figure.Figure.autofmt_xdate}{autofmt\_xdate}} 
+      \item Pandas can convert to the correct date time formate with \underline{\href{https://pandas.pydata.org/docs/reference/api/pandas.to_datetime.html}{to\_datetime}}
+      \item \underline{\href{https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.gca.html}{gca}} is Get Current Axis 
+      \item \underline{\href{https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.gcf.html}{gcf}} is Get Current Figure
+      \end{itemize}
+      
+      
+    \end{column}
+
+    \hfill
+
+    \begin{column}{.48\textwidth}
+      Code Example:
+      
+    \inputminted[firstline=9,
+      lastline=32,
+      breaklines,
+      fontsize=\tiny,
+      bgcolor=Background,
+      linenos]{python}{../src/data_plot.py}
+      
+      
+    \end{column}
+  \end{columns}
+
+\end{Slide}
 
 \subsection{Lab}
 \begin{Slide}{Lab}
   LAB 3
+  \pause
+  
+  \begin{tcolorbox}[colback=blue!25!white,colframe=blue!75!black,title=THANK YOU]
+    THANK YOU FOR ATTENDING! \\
+    BEST OF LUCK IN YOUR DATA SCIENCE ENDEAVORS!
+  \end{tcolorbox}
+
 \end{Slide}

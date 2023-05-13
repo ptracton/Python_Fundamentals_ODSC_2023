@@ -1,0 +1,148 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Files}
+
+  \begin{itemize}
+  \item \underline{\href{https://docs.python.org/3.4/tutorial/inputoutput.html\#reading-and-writing-files}{Official Documentation}}
+  \item open(path [,mode]) – returns file object
+  \item Mode specifies file mode
+    \begin{itemize}
+    \item r  open for read
+    \item w  open for write, creates file if needed
+    \item a  open for append
+    \item r+ open for update (r+w)
+    \item w+ open for update (r+w), truncate!
+    \item rb, wb, ab, rb+, wb+  open in binary mode
+    \end{itemize}
+  \item Mode defaults to 'r'
+  \end{itemize}
+
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{File Reading}
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      \begin{itemize}
+      \item read([size]) – read size bytes
+        \begin{itemize}
+        \item Returns string
+        \item <size> defaults to infinite
+        \end{itemize}
+      \item readline([size]) – read line
+      \item readlines() - read all lines
+
+      \end{itemize}
+    \end{column}
+
+    \hfill
+
+    \begin{column}{.48\textwidth}
+
+      \pause
+
+      \inputminted[firstline=3,
+      lastline=27,
+      breaklines,
+      fontsize=\tiny,
+      bgcolor=Background,
+      linenos]{python}{../src/filer.py}
+      
+    \end{column}
+  \end{columns} 
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{File Writing}
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      \begin{itemize}
+      \item write(str) – writes string to file
+      \item writelines(list) – writes sequence of strings to
+      \item file flush () - flushes write buffer
+      \end{itemize}
+    \end{column}
+
+    \hfill
+
+    \begin{column}{.48\textwidth}
+
+      \pause
+
+      \inputminted[firstline=3,
+      lastline=27,
+      breaklines,
+      fontsize=\tiny,
+      bgcolor=Background,
+      linenos]{python}{../src/filew.py}
+      
+    \end{column}
+  \end{columns} 
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{File Other}
+
+  \begin{itemize}
+  \item close() - flush buffer and close file
+  \item fileno() - get OS file handle
+  \item tell() - get file position
+  \item seek(offset [,whence]) – set file position
+    \begin{itemize}
+    \item os.SEEK\_SET
+    \item os.SEEK\_CUR
+    \item os.SEEK\_END
+    \end{itemize}
+  \item truncate([size]) – cut off file length
+  \end{itemize}
+
+\end{Slide}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{Slide}{Printing to a File}
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      \begin{itemize}
+      \item \underline{\href{https://docs.python.org/release/3.1/library/functions.html\#print}{Official Documentation}}
+      \item file defaults to stdout
+      \item it can be changed to any file you want
+      \end{itemize}
+    \end{column}
+
+    \hfill
+
+    \begin{column}{.48\textwidth}
+
+      \pause
+
+      \inputminted[firstline=3,
+      lastline=27,
+      breaklines,
+      fontsize=\tiny,
+      bgcolor=Background,
+      linenos]{python}{../src/filep.py}
+
+      
+    \end{column}
+  \end{columns} 
+\end{Slide}
