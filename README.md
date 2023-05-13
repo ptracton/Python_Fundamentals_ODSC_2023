@@ -26,7 +26,7 @@ This will start the webserver that acts as our development environment.
 
 ## Syllabus
 
-This is a 3 hour class.  It is broken up into 3 parts.  Each part will be about 30-45 minutes followed by a short lab to try out the topics just covered.  hands on trying out of code is critical to learning.  Lab instructions and solutions will be provided.
+This is a 2 hour 45 minute hour class.  It is broken up into 3 parts.  Each part will be about 30-45 minutes followed by a short lab to try out the topics just covered.  Hands on trying out of code is critical to learning.  Lab instructions and solutions will be provided.
 
 1. **Installation and Basics**
 
